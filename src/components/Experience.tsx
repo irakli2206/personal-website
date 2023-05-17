@@ -96,8 +96,8 @@ const Experience = () => {
 
     return (
         <>
-            <div className='py-40 max-w-screen-xl px-12 m-auto flex gap-24 relative'>
-                <div className='basis-4/12 h-fit flex flex-col sticky top-8'>
+            <div className='py-40 max-w-screen-xl px-4 lg:px-12 m-auto flex flex-col lg:flex-row gap-24 relative'>
+                <div className='lg:basis-4/12 h-fit flex flex-col lg:sticky top-8'>
                     <motion.h1
                         {...textAnimation(0)}
                         className='text-6xl w-fit text-transparent py-2 font-medium bg-clip-text bg-gradient-to-r from-text to-transparent-text'>Irakli Begoidze</motion.h1>
@@ -111,7 +111,7 @@ const Experience = () => {
                         Problem-solving fuels my passion for coding, providing me with the challenges I crave. During my free time, I... write even more code, the portfolio MUST grow. Other than that, I also indulge in reading about history and drawing maps.
                     </motion.p>
                 </div>
-                <div className='basis-8/12 flex flex-col gap-48'>
+                <div className='lg:basis-8/12 flex flex-col gap-48'>
                     <div className='flex flex-col gap-6' >
                         {/* <h1 className='text-5xl font-medium ml-auto'>Experience</h1> */}
 
@@ -120,7 +120,7 @@ const Experience = () => {
                             return <ExperienceCard {...exp} custom={i}  active={isActive} onCardEnter={() => onCardEnter(i)} onCardLeave={onCardLeave} />
                         })}
                         <div className='group pt-4 cursor-pointer flex ps-12 items-center gap-2 justify-end'>
-                            <p className=' text-2xl text-start font-light transition '>View Full Resume</p>
+                            <p className='text-xl md:text-2xl text-start font-light transition '>View Full Resume</p>
                             <TbArrowNarrowRight size={24} className='transition group-hover:translate-x-2' />
                         </div>
 

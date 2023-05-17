@@ -24,7 +24,7 @@ const ExperienceCard = ({ active, custom, onCardEnter, onCardLeave, period, comp
     console.log(active)
 
     return (
-        <motion.div ref={ref} custom={custom} className={`w-full flex gap-12 tracking-wide p-8 hover:shadow-experience-card  rounded cursor-pointer ${active ? 'opacity-100' : 'opacity-50'}`}
+        <motion.div ref={ref} custom={custom} className={`w-full flex gap-4 lg:gap-12 tracking-wide p-4 lg:p-8 hover:shadow-experience-card  rounded cursor-pointer ${active ? 'opacity-100' : 'opacity-50'}`}
             onMouseEnter={onCardEnter} onMouseLeave={onCardLeave} initial={{opacity: 0, y: 20, background: '#18181B'}} animate={controls} whileHover={{background: '#27272A'}}
          >
             <p className='basis-2/12 text-md font-medium leading-8 text-end'>{period}</p>
@@ -35,7 +35,7 @@ const ExperienceCard = ({ active, custom, onCardEnter, onCardLeave, period, comp
                 <div className='flex flex-wrap gap-4 pt-2'>
                     {tech.map(item => {
                         return (
-                            <div className='px-6 py-2 text-center bg-primary rounded-full text-sm text-lightest'>
+                            <div className='px-4 md:px-6 py-2 text-center bg-primary rounded-full text-xs md:text-sm text-lightest'>
                                 {item}
                             </div>
                         )

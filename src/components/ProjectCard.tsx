@@ -23,7 +23,7 @@ const ProjectCard = ({ active, custom, onCardEnter, onCardLeave, img, title, des
     console.log(active)
     
     return (
-        <motion.div ref={ref} custom={custom} className={`w-full flex  tracking-wide p-8  hover:shadow-experience-card hover:bg-dark rounded cursor-pointer ${active ? 'saturate-100' : 'saturate-0'}`}
+        <motion.div ref={ref} custom={custom} className={`w-full flex gap-4 lg:gap-12 tracking-wide p-8  hover:shadow-experience-card hover:bg-dark rounded cursor-pointer ${active ? 'saturate-100' : 'saturate-0'}`}
             onMouseEnter={onCardEnter} onMouseLeave={onCardLeave} initial={{opacity: 0, y: 20, background: '#18181B'}} animate={controls} whileHover={{background: '#27272A'}}
         > 
 
@@ -35,7 +35,7 @@ const ProjectCard = ({ active, custom, onCardEnter, onCardLeave, img, title, des
                 <div className='flex flex-wrap gap-4 pt-2'>
                     {tech.map(item => {
                         return (
-                            <div className='px-6 py-2 text-center bg-primary rounded-full text-sm text-lightest'>
+                            <div className='px-4 md:px-6 py-2 text-center bg-primary rounded-full text-xs md:text-sm text-lightest'>
                                 {item}
                             </div>
                         )

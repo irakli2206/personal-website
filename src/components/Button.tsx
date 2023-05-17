@@ -19,9 +19,9 @@ const Button = ({ style, children, icon, animationDelay }: Props) => {
                     damping: 10,
                     stiffness: 200,
                     mass: 0.2
-                 }
+                }
             }}
-            className={`${style} group rounded border-solid border-light border px-28 py-4 tracking-widest text-xl flex gap-4 shadow-button
+            className={`${style} group rounded border-solid border-light border px-12 md:px-16 sm:px-20 py-4 tracking-widest text-md md:text-xl flex gap-4 shadow-button
         bg-gradient-to-b from-dark/50 to-dark/0
         hover:shadow-inner   
         `}>
