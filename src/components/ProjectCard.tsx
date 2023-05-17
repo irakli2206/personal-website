@@ -1,18 +1,31 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Job, Project } from '../types'
+import { motion, useAnimationControls, useInView } from 'framer-motion'
 
 type Props = Project & {
     active: boolean
+    custom: number
     onCardEnter: () => void
     onCardLeave: () => void
 }
 
-const ProjectCard = ({ active, onCardEnter, onCardLeave, img, title, description, tech }: Props) => {
+const ProjectCard = ({ active, custom, onCardEnter, onCardLeave, img, title, description, tech }: Props) => {
+    let controls = useAnimationControls()
+    let ref = useRef(null)
+    let inView = useInView(ref)
 
+    useEffect(() =>{
+        if(inView) {
+            controls.start({ y: 0, opacity: 1, transition: { type: 'spring', damping: 10, mass: 0.2, delay: 0.1 * custom }})
+        }  
+    }, [inView])
+
+    console.log(active)
+    
     return (
-        <div className={`w-full flex  tracking-wide p-8 transition duration-300 hover:shadow-experience-card hover:bg-dark rounded cursor-pointer ${active ? 'saturate-100' : 'saturate-0'}`}
-            onMouseEnter={onCardEnter} onMouseLeave={onCardLeave}
-        >
+        <motion.div ref={ref} custom={custom} className={`w-full flex  tracking-wide p-8  hover:shadow-experience-card hover:bg-dark rounded cursor-pointer ${active ? 'saturate-100' : 'saturate-0'}`}
+            onMouseEnter={onCardEnter} onMouseLeave={onCardLeave} initial={{opacity: 0, y: 20, background: '#18181B'}} animate={controls} whileHover={{background: '#27272A'}}
+        > 
 
             <div className='flex flex-col gap-2'>
                 <img src={img} alt='' className='rounded' />
@@ -29,7 +42,7 @@ const ProjectCard = ({ active, onCardEnter, onCardLeave, img, title, description
                     })}
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

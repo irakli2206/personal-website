@@ -25,7 +25,7 @@ function App() {
   return (
     <>
 
-      <main className='bg-darkest to-zinc-950 min-h-screen text-text flex justify-center a:hover:dark '
+      <main className='bg-darkest  min-h-screen text-text flex justify-center a:hover:dark '
       >
         <div className='flex-1 relative z-20' >
           <Header />

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
-        <div className='max-w-screen-xl py-12 m-auto flex justify-between'>
+        <div className='max-w-screen-xl py-12 px-12 m-auto flex justify-between'>
             <div className='flex gap-8  '>
                 <Link to="https://github.com/irakli2206" target='_blank'>
                     <SiGithub size={36} className='transition cursor-pointer text-lightest hover:text-text' />

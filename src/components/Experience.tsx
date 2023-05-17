@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import ExperienceCard from './ExperienceCard'
 import { Job, Project } from '../types'
 import { TbArrowNarrowRight } from 'react-icons/tb'
@@ -7,6 +7,8 @@ import Poemo from '../assets/projects/Poemo.svg'
 import Proficio from '../assets/projects/Proficio.svg'
 import Resumate from '../assets/projects/Resumate.svg'
 import ProjectCard from './ProjectCard'
+import { motion, useAnimationControls, useInView } from 'framer-motion'
+import { textAnimation } from '../util'
 
 const Experience = () => {
     let [active, setActive] = useState(-1)
@@ -89,37 +91,45 @@ const Experience = () => {
     const onProjectCardLeave = () => {
         setActiveProject(-1)
     }
+    
+ 
 
     return (
         <>
             <div className='py-40 max-w-screen-xl px-12 m-auto flex gap-24 relative'>
                 <div className='basis-4/12 h-fit flex flex-col sticky top-8'>
-                    <h1 className='text-6xl w-fit text-transparent py-2 font-medium bg-clip-text bg-gradient-to-r from-text to-transparent-text'>Irakli Begoidze</h1>
+                    <motion.h1
+                        {...textAnimation(0)}
+                        className='text-6xl w-fit text-transparent py-2 font-medium bg-clip-text bg-gradient-to-r from-text to-transparent-text'>Irakli Begoidze</motion.h1>
                     <h2 className='text-3xl text-lightest font-light'>Senior Front-End Developer</h2>
-                    <p className='text-xl pt-8 font-light text-lightest'>
+                    <motion.p
+                        {...textAnimation(0.15)}
+                        className='text-xl pt-8 font-light text-lightest'>
                         In the summer of 2019, my coding journey began out of sheer boredom. Guided by a web developer friend, I swiftly acquired front-end skills and started creating basic projects. However, my hunger for knowledge grew, leading me to accumulate diverse experience with various technologies. I've worked in multiple companies, and I'm proud to have launched my own startup,
                         <span className='text-text font-medium'> Ancestral Whispers </span>.
                         <br />  <br />
                         Problem-solving fuels my passion for coding, providing me with the challenges I crave. During my free time, I... write even more code, the portfolio MUST grow. Other than that, I also indulge in reading about history and drawing maps.
-                    </p>
+                    </motion.p>
                 </div>
                 <div className='basis-8/12 flex flex-col gap-48'>
-                    <div className='flex flex-col gap-6'>
+                    <div className='flex flex-col gap-6' >
+                        {/* <h1 className='text-5xl font-medium ml-auto'>Experience</h1> */}
+
                         {jobData.map((exp, i) => {
                             let isActive = active === -1 ? true : active === i
-                            return <ExperienceCard {...exp} active={isActive} onCardEnter={() => onCardEnter(i)} onCardLeave={onCardLeave} />
+                            return <ExperienceCard {...exp} custom={i}  active={isActive} onCardEnter={() => onCardEnter(i)} onCardLeave={onCardLeave} />
                         })}
                         <div className='group pt-4 cursor-pointer flex ps-12 items-center gap-2 justify-end'>
                             <p className=' text-2xl text-start font-light transition '>View Full Resume</p>
                             <TbArrowNarrowRight size={24} className='transition group-hover:translate-x-2' />
                         </div>
-                        
+
                     </div>
 
                     <div className='flex flex-col gap-6'>
                         {projectData.map((project, i) => {
                             let isActive = activeProject === i
-                            return <ProjectCard {...project} active={isActive} onCardEnter={() => onProjectCardEnter(i)} onCardLeave={onProjectCardLeave} />
+                            return <ProjectCard {...project} active={isActive} custom={i} onCardEnter={() => onProjectCardEnter(i)} onCardLeave={onProjectCardLeave} />
                         })}
                     </div>
                 </div>
