@@ -21,7 +21,8 @@ const Experience = () => {
             location: 'Remote (Short-Term Contract)',
             period: '2023',
             role: 'Lead Frontend Developer',
-            tech: ['NextJS', 'GraphQL', 'ShopifyAPI', 'Javascript', 'Formik', 'Yup']
+            tech: ['NextJS', 'GraphQL', 'ShopifyAPI', 'Javascript', 'Formik', 'Yup'],
+            url: 'https://convo-agency.co.il/'
         },
         {
             company: 'Conso4s',
@@ -29,7 +30,8 @@ const Experience = () => {
             location: 'Tbilisi, Georgia (Hybrid)',
             period: '2021-2022',
             role: 'Middle ReactJS/React Native Developer',
-            tech: ['ReactJS', 'React Native', 'Typescript', 'Vercel CI/CD', 'Redux Toolkit']
+            tech: ['ReactJS', 'React Native', 'Typescript', 'Vercel CI/CD', 'Redux Toolkit'],
+            url: 'https://conso4s.com/'
         },
         {
             company: 'Ancestral Whispers',
@@ -37,7 +39,8 @@ const Experience = () => {
             location: 'Tbilisi, Georgia',
             period: '2021',
             role: 'Founder & Developer',
-            tech: ['NextJS', 'Typescript', 'ChakraUI', 'Supabase', 'Cloudinary', 'Figma']
+            tech: ['NextJS', 'Typescript', 'ChakraUI', 'Supabase', 'Cloudinary', 'Mapbox'],
+            url: 'https://www.ancestralwhispers.org/'
         },
         {
             company: 'Comas Digital PLC',
@@ -45,7 +48,8 @@ const Experience = () => {
             location: 'Remote',
             period: '2019-2021',
             role: 'Junior ReactJS Developer',
-            tech: ['ReactJS', 'Javascript', 'MaterialUI', 'Figma']
+            tech: ['ReactJS', 'Javascript', 'MaterialUI', 'Figma'],
+            url: 'https://comasdigital.hk/'
         },
     ]
 
@@ -54,25 +58,30 @@ const Experience = () => {
             title: 'Poemo',
             description: 'OpenAI-based project that generates beautiful poems based on prompts.',
             tech: ['ReactJS', 'ChakraUI', 'OpenAI API'],
-            img: Poemo
+            img: Poemo,
+            url: 'https://poem-generator-six.vercel.app/'
         },
         {
             title: 'KTP',
-            description: 'OpenAI-based project that generates beautiful poems based on prompts.',
-            tech: ['ReactJS', 'ChakraUI', 'OpenAI API'],
-            img: KTP
+            description: 'Linguistics and toponymy project explaining the etymologies of various placenames in Georgia and the surrounding areas',
+            tech: ['ReactJS', 'ChakraUI', 'Mapbox'],
+            img: KTP,
+            url: 'https://kartvelian-toponymy-project.vercel.app/'
         },
         {
             title: 'Proficio',
-            description: 'OpenAI-based project that generates beautiful poems based on prompts.',
-            tech: ['ReactJS', 'ChakraUI', 'OpenAI API'],
-            img: Proficio
+            description: 'Fake website offering website deveopment and UI design services.',
+            tech: ['ReactJS', 'MaterialUI'],
+            img: Proficio,
+            url: 'https://www.proficio.design/'
         },
         {
-            title: 'Resumate',
-            description: 'OpenAI-based project that generates beautiful poems based on prompts.',
-            tech: ['ReactJS', 'ChakraUI', 'OpenAI API'],
-            img: Resumate
+            title: 'Resumate (Unfinished)',
+            description: `Initially meant to be a real project that serves to analyze resumes using OpenAI's API. Eventually realized that the costs would be way too high to 
+            generate profit, so I had to abandon the project`,
+            tech: ['ReactJS', 'NextUI', 'OpenAI API', 'React-PDF'],
+            img: Resumate,
+            url: 'https://resumate.vercel.app/'
         },
     ]
 
@@ -91,8 +100,8 @@ const Experience = () => {
     const onProjectCardLeave = () => {
         setActiveProject(-1)
     }
-    
- 
+
+
 
     return (
         <>
@@ -106,7 +115,7 @@ const Experience = () => {
                         {...textAnimation(0.15)}
                         className='text-xl pt-8 font-light text-lightest'>
                         In the summer of 2019, my coding journey began out of sheer boredom. Guided by a web developer friend, I swiftly acquired front-end skills and started creating basic projects. However, my hunger for knowledge grew, leading me to accumulate diverse experience with various technologies. I've worked in multiple companies, and I'm proud to have launched my own startup,
-                        <span className='text-text font-medium'> Ancestral Whispers </span>.
+                        <a href='https://www.ancestralwhispers.org/' target='_blank' className='text-text font-medium'> Ancestral Whispers </a>.
                         <br />  <br />
                         Problem-solving fuels my passion for coding, providing me with the challenges I crave. During my free time, I... write even more code, the portfolio MUST grow. Other than that, I also indulge in reading about history and drawing maps.
                     </motion.p>
@@ -117,7 +126,7 @@ const Experience = () => {
 
                         {jobData.map((exp, i) => {
                             let isActive = active === -1 ? true : active === i
-                            return <ExperienceCard {...exp} custom={i}  active={isActive} onCardEnter={() => onCardEnter(i)} onCardLeave={onCardLeave} />
+                            return <ExperienceCard {...exp} custom={i} active={isActive} onCardEnter={() => onCardEnter(i)} onCardLeave={onCardLeave} />
                         })}
                         <div className='group pt-4 cursor-pointer flex ps-12 items-center gap-2 justify-end'>
                             <p className='text-xl md:text-2xl text-start font-light transition '>View Full Resume</p>

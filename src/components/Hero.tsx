@@ -14,11 +14,13 @@ const Hero = () => {
       </div>
       <motion.p {...textAnimation(0.12)} className='text-xl'>Hi, I’m Irakli 👋</motion.p>
       <motion.h1
-      {...textAnimation(0.24)}
+        {...textAnimation(0.24)}
         className='py-2 text-4xl md:text-6xl text-center text-transparent bg-clip-text bg-gradient-to-r from-text to-transparent-text'
 
       >Crafting Modern Front-End <br /> Experiences with a Flair for <br /> Exquisite Design.</motion.h1>
-      <Button style='my-12' animationDelay={0.36} icon={<TbArrowUpRight size={28} />}>Write Me</Button>
+      <a href='mailto:iraklibego1@gmail.com' className='my-12'>
+        <Button animationDelay={0.36} icon={<TbArrowUpRight size={28} />}>Write Me</Button>
+      </a>
     </div>
   )
 }

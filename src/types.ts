@@ -5,6 +5,7 @@ export type Job = {
     location: string
     description: string
     tech: string[]
+    url?: string 
 }
 
 export type Project = {
@@ -12,4 +13,5 @@ export type Project = {
     description: string 
     tech: string[]
     img: string
+    url?: string 
 }
