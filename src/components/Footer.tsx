@@ -13,7 +13,7 @@ const Footer = () => {
                     <SiLinkedin size={36} className='transition cursor-pointer text-lightest hover:text-text' />
                 </Link>
             </div>
-            <p className='lg:text-xl text-lightest font-light [&>span]:text-text [&>span]:font-medium m-auto'>
+            <p className='lg:text-xl text-lightest font-light [&>span]:text-text [&>span]:font-medium my-auto'>
                 Designed in 
                 <span><Link to='https://www.figma.com/' target='_blank'> Figma</Link></span>, constructed in
                 <span><Link to='https://www.react.dev/' target='_blank'> React</Link></span>, enchanted with

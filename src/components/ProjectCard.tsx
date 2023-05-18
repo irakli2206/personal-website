@@ -20,7 +20,6 @@ const ProjectCard = ({ active, custom, onCardEnter, onCardLeave, img, title, des
         }
     }, [inView])
 
-    console.log(active)
 
     return (
         <motion.a href={url} target='_blank' ref={ref} custom={custom} className={`w-full flex gap-4 lg:gap-12 tracking-wide p-8  hover:shadow-experience-card hover:bg-dark rounded cursor-pointer ${active ? 'saturate-100' : 'saturate-0'}`}

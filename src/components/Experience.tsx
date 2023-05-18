@@ -7,12 +7,15 @@ import Poemo from '../assets/projects/Poemo.svg'
 import Proficio from '../assets/projects/Proficio.svg'
 import Resumate from '../assets/projects/Resumate.svg'
 import ProjectCard from './ProjectCard'
-import { motion, useAnimationControls, useInView } from 'framer-motion'
+import { AnimatePresence, motion, useAnimationControls, useInView } from 'framer-motion'
 import { textAnimation } from '../util'
+import { Link } from 'react-router-dom'
 
 const Experience = () => {
     let [active, setActive] = useState(-1)
     let [activeProject, setActiveProject] = useState(-1)
+
+    let [workTitle, setWorkTitle] = useState(0)
 
     let jobData: Job[] = [
         {
@@ -101,7 +104,30 @@ const Experience = () => {
         setActiveProject(-1)
     }
 
+    useEffect(() => {
+        setTimeout(() => {
+            setWorkTitle(prev => {
+                if (prev == 0) return 1
+                if (prev == 1) return 2
+                if (prev == 2) return 3
+                else return 0
+            })
+        }, 2500)
+    }, [workTitle])
 
+    let getWorkTitle = () => {
+        switch (workTitle) {
+            case (0):
+                return <motion.h2 key={0} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0, transition: { mass: 0.2 } }} exit={{ opacity: 0, x: 20 }} className='text-3xl text-lightest font-light'>Senior Front-End Developer</motion.h2>
+            case (1):
+                return <motion.h2 key={1} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0, transition: { mass: 0.2 } }} exit={{ opacity: 0, x: 20 }} className='text-3xl text-lightest font-light'>(Kinda) UI Designer</motion.h2>
+            case (2):
+                return <motion.h2 key={2} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0, transition: { mass: 0.2 } }} exit={{ opacity: 0, x: 20 }} className='text-3xl text-lightest font-light'>Deadline Respecter</motion.h2>
+            case (3):
+                return <motion.h2 key={3} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0, transition: { mass: 0.2 } }} exit={{ opacity: 0, x: 20 }} className='text-3xl text-lightest font-light'>Bugfix Enjoyer</motion.h2>
+
+        }
+    }
 
     return (
         <>
@@ -109,8 +135,13 @@ const Experience = () => {
                 <div className='lg:basis-4/12 h-fit flex flex-col lg:sticky top-8'>
                     <motion.h1
                         {...textAnimation(0)}
-                        className='text-6xl w-fit text-transparent py-2 font-medium bg-clip-text bg-gradient-to-r from-text to-transparent-text'>Irakli Begoidze</motion.h1>
-                    <h2 className='text-3xl text-lightest font-light'>Senior Front-End Developer</h2>
+                        className='text-6xl w-fit text-transparent py-2 font-medium bg-clip-text bg-gradient-to-r from-text to-transparent-text'>Irakli Begoidze  </motion.h1>
+                    <div >
+                        <AnimatePresence mode='popLayout'>
+                            {getWorkTitle()}
+
+                        </AnimatePresence>
+                    </div>
                     <motion.p
                         {...textAnimation(0.15)}
                         className='text-xl pt-8 font-light text-lightest'>
@@ -125,13 +156,13 @@ const Experience = () => {
                         {/* <h1 className='text-5xl font-medium ml-auto'>Experience</h1> */}
 
                         {jobData.map((exp, i) => {
-                            let isActive = active === -1 ? true : active === i
-                            return <ExperienceCard {...exp} custom={i} active={isActive} onCardEnter={() => onCardEnter(i)} onCardLeave={onCardLeave} />
+                            // let isActive = active === -1 ? true : active === i
+                            return <ExperienceCard {...exp} index={i} activeIndex={active} onCardEnter={() => onCardEnter(i)} onCardLeave={onCardLeave} />
                         })}
-                        <div className='group pt-4 cursor-pointer flex ps-12 items-center gap-2 justify-end'>
+                        <Link to='/resume' className='group pt-4 cursor-pointer flex ps-12 items-center gap-2 justify-end'>
                             <p className='text-xl md:text-2xl text-start font-light transition '>View Full Resume</p>
                             <TbArrowNarrowRight size={24} className='transition group-hover:translate-x-2' />
-                        </div>
+                        </Link>
 
                     </div>
 
