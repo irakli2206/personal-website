@@ -47,11 +47,11 @@ const Experience = () => {
         },
         {
             company: 'Comas Digital PLC',
-            description: 'Transformed a hobby-based project into a thriving startup by building a compact team and offering unique services. Dedicated efforts in optimizing the website while fearlessly experimenting with cutting-edge technologies to drive innovation and achieve outstanding results.',
+            description: "Did basic UI design in Figma. Customized MaterialUI components based on project's requirements. Added multiple information display pages, optimized performance and maintained code. Implemented Strapi CMS.",
             location: 'Remote',
             period: '2019-2021',
             role: 'Junior ReactJS Developer',
-            tech: ['ReactJS', 'Javascript', 'MaterialUI', 'Figma'],
+            tech: ['ReactJS', 'Javascript', 'MaterialUI', 'Figma', 'Strapi'],
             url: 'https://comasdigital.hk/'
         },
     ]
@@ -120,7 +120,7 @@ const Experience = () => {
             case (0):
                 return <motion.h2 key={0} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0, transition: { mass: 0.2 } }} exit={{ opacity: 0, x: 20 }} className='text-3xl text-lightest font-light'>Senior Front-End Developer</motion.h2>
             case (1):
-                return <motion.h2 key={1} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0, transition: { mass: 0.2 } }} exit={{ opacity: 0, x: 20 }} className='text-3xl text-lightest font-light'>(Kinda) UI Designer</motion.h2>
+                return <motion.h2 key={1} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0, transition: { mass: 0.2 } }} exit={{ opacity: 0, x: 20 }} className='text-3xl text-lightest font-light'>UI Designer</motion.h2>
             case (2):
                 return <motion.h2 key={2} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0, transition: { mass: 0.2 } }} exit={{ opacity: 0, x: 20 }} className='text-3xl text-lightest font-light'>Deadline Respecter</motion.h2>
             case (3):
