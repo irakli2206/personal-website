@@ -1,6 +1,6 @@
 import { AnimatePresence, motion, useAnimationControls } from 'framer-motion'
 import React, { useState } from 'react'
-import { SiChakraui, SiTypescript, SiReact, SiNextdotjs, SiNodedotjs, SiNestjs, SiMui, SiTailwindcss, SiSupabase, SiFigma } from 'react-icons/si'
+import { SiChakraui, SiTypescript, SiReact, SiNextdotjs, SiNodedotjs, SiNestjs, SiMui, SiTailwindcss, SiSupabase, SiFigma, SiFirebase, SiFramer } from 'react-icons/si'
 
 
 const Stack = () => {
@@ -48,7 +48,8 @@ const Stack = () => {
                         <SiNodedotjs style='' />
                         <SiNestjs />
                         <SiMui />
-
+                        <SiFirebase />
+                        <SiFramer />
                     </motion.div>
                 }
             </AnimatePresence>
