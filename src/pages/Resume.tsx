@@ -1,7 +1,7 @@
 import React from 'react'
 import { TbArrowBack } from 'react-icons/tb'
 import { Link, useNavigate } from 'react-router-dom'
-import ResumePDF from '../assets/Irakli Begoidze CV.pdf'
+import ResumePDF from '../assets/Irakli Begoidze CV Eng.pdf'
 
 const Resume = () => {
     const navigate = useNavigate()

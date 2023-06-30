@@ -118,13 +118,13 @@ const Experience = () => {
     let getWorkTitle = () => {
         switch (workTitle) {
             case (0):
-                return <motion.h2 key={0} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0, transition: { mass: 0.2 } }} exit={{ opacity: 0, x: 20 }} className='text-3xl text-lightest font-light'>Senior Front-End Developer</motion.h2>
+                return <motion.h2 key={0} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0, transition: { mass: 0.2, delay: 0.05 } }} exit={{ opacity: 0, x: 20 }} className='text-3xl text-lightest font-light'>Senior Front-End Developer</motion.h2>
             case (1):
-                return <motion.h2 key={1} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0, transition: { mass: 0.2 } }} exit={{ opacity: 0, x: 20 }} className='text-3xl text-lightest font-light'>UI Designer</motion.h2>
+                return <motion.h2 key={1} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0, transition: { mass: 0.2, delay: 0.05} }} exit={{ opacity: 0, x: 20 }} className='text-3xl text-lightest font-light'>UI Designer</motion.h2>
             case (2):
-                return <motion.h2 key={2} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0, transition: { mass: 0.2 } }} exit={{ opacity: 0, x: 20 }} className='text-3xl text-lightest font-light'>Deadline Respecter</motion.h2>
+                return <motion.h2 key={2} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0, transition: { mass: 0.2, delay: 0.05 } }} exit={{ opacity: 0, x: 20 }} className='text-3xl text-lightest font-light'>Deadline Respecter</motion.h2>
             case (3):
-                return <motion.h2 key={3} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0, transition: { mass: 0.2 } }} exit={{ opacity: 0, x: 20 }} className='text-3xl text-lightest font-light'>Bugfix Enjoyer</motion.h2>
+                return <motion.h2 key={3} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0, transition: { mass: 0.2, delay: 0.05 } }} exit={{ opacity: 0, x: 20 }} className='text-3xl text-lightest font-light'>Bugfix Enjoyer</motion.h2>
 
         }
     }
