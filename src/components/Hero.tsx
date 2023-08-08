@@ -3,6 +3,7 @@ import Button from './Button'
 import { TbArrowUpRight } from 'react-icons/tb'
 import { motion } from 'framer-motion'
 import { textAnimation } from '../util'
+import Image from '../assets/1637247926422.jpeg'
 
 const Hero = () => {
   return (
@@ -10,7 +11,7 @@ const Hero = () => {
       <div className='w-40 h-40 saturate-0 contrast-125'>
         <motion.img
           {...textAnimation(0)}
-          className='rounded-full' src="https://media.licdn.com/dms/image/C5603AQEpNMdy_FYHBg/profile-displayphoto-shrink_800_800/0/1637247926422?e=1689811200&v=beta&t=m7ZK5WAHq6D8-UaXiMKTuVQOeWw5xgdKhcusV0-K5Pg" alt="" />
+          className='rounded-full' src={Image} alt="" />
       </div>
       <motion.p {...textAnimation(0.12)} className='text-xl'>Hi, I’m Irakli 👋</motion.p>
       <motion.h1
