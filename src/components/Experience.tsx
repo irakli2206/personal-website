@@ -145,10 +145,10 @@ const Experience = () => {
                     <motion.p
                         {...textAnimation(0.15)}
                         className='text-xl pt-8 font-light text-lightest'>
-                        In the summer of 2019, my coding journey began out of sheer boredom. Guided by a web developer friend, I swiftly acquired front-end skills and started creating basic projects. However, my hunger for knowledge grew, leading me to accumulate diverse experience with various technologies. I've worked in multiple companies, and I'm proud to have launched my own startup,
+                        My coding journey begins in 2018. By combining academic education, web developer mentor's guidance and independent research, I swiftly acquired front-end skills and started creating basic projects. Over time, my hunger for knowledge grew, leading me to accumulate diverse experience with various technologies. I've worked in multiple companies, and I'm proud to have launched my own startup,
                         <a href='https://www.ancestralwhispers.org/' target='_blank' className='text-text font-medium'> Ancestral Whispers </a>.
                         <br />  <br />
-                        Problem-solving fuels my passion for coding, providing me with the challenges I crave. During my free time, I... write even more code, the portfolio MUST grow. Other than that, I also indulge in reading about history and drawing maps.
+                        Problem-solving fuels my passion for coding, providing me with the challenges I crave. During my free time, I... write even more code, the portfolio MUST grow. Other than that, I also indulge in history and cartography.
                     </motion.p>
                 </div>
                 <div className='lg:basis-8/12 flex flex-col gap-48'>
