@@ -22,19 +22,10 @@ const Experience = () => {
             company: 'Convo-Agency',
             description: 'Lead 3-person team, organize standups, gather updates, provide feedback. Drive tech stack decisions, coordinate with PM. Tackle high-priority, complex tasks.',
             location: 'Remote (Short-Term Contract)',
-            period: '2023',
-            role: 'Lead Frontend Developer',
+            period: '2021-Current',
+            role: 'Senior Fullstack Developer',
             tech: ['NextJS', 'GraphQL', 'ShopifyAPI', 'Javascript', 'Formik', 'Yup'],
             url: 'https://convo-agency.co.il/'
-        },
-        {
-            company: 'Conso4s',
-            description: 'Joined international team, contributed to ReactJS/React Native apps. Collaborated closely with friendly team. Enhanced UX, optimized performance, reviewed code. Effective communication, updated practices, delivered efficient code.',
-            location: 'Tbilisi, Georgia (Hybrid)',
-            period: '2021-2022',
-            role: 'Middle ReactJS/React Native Developer',
-            tech: ['ReactJS', 'React Native', 'Typescript', 'Vercel CI/CD', 'Redux Toolkit'],
-            url: 'https://conso4s.com/'
         },
         {
             company: 'Ancestral Whispers',
@@ -46,14 +37,15 @@ const Experience = () => {
             url: 'https://www.ancestralwhispers.org/'
         },
         {
-            company: 'Comas Digital PLC',
-            description: "Did basic UI design in Figma. Customized MaterialUI components based on project's requirements. Added multiple information display pages, optimized performance and maintained code. Implemented Strapi CMS.",
-            location: 'Remote',
-            period: '2019-2021',
-            role: 'Junior ReactJS Developer',
-            tech: ['ReactJS', 'Javascript', 'MaterialUI', 'Figma', 'Strapi'],
-            url: 'https://comasdigital.hk/'
+            company: 'Conso4s',
+            description: 'Joined international team, contributed to ReactJS/React Native apps. Collaborated closely with friendly team. Enhanced UX, optimized performance, reviewed code. Effective communication, updated practices, delivered efficient code.',
+            location: 'Tbilisi, Georgia (Hybrid)',
+            period: '2018-2022',
+            role: 'Middle ReactJS/React Native Developer',
+            tech: ['ReactJS', 'React Native', 'Typescript', 'Vercel CI/CD', 'Redux Toolkit'],
+            url: 'https://conso4s.com/'
         },
+
     ]
 
     let projectData: Project[] = [
@@ -120,7 +112,7 @@ const Experience = () => {
             case (0):
                 return <motion.h2 key={0} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0, transition: { mass: 0.2, delay: 0.05 } }} exit={{ opacity: 0, x: 20 }} className='text-3xl text-lightest font-light'>Senior Front-End Developer</motion.h2>
             case (1):
-                return <motion.h2 key={1} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0, transition: { mass: 0.2, delay: 0.05} }} exit={{ opacity: 0, x: 20 }} className='text-3xl text-lightest font-light'>UI Designer</motion.h2>
+                return <motion.h2 key={1} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0, transition: { mass: 0.2, delay: 0.05 } }} exit={{ opacity: 0, x: 20 }} className='text-3xl text-lightest font-light'>UI Designer</motion.h2>
             case (2):
                 return <motion.h2 key={2} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0, transition: { mass: 0.2, delay: 0.05 } }} exit={{ opacity: 0, x: 20 }} className='text-3xl text-lightest font-light'>Deadline Respecter</motion.h2>
             case (3):
