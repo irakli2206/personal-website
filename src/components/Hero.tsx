@@ -11,7 +11,7 @@ const Hero = () => {
       <div className='w-40 h-40 saturate-0 contrast-125'>
         <motion.img
           {...textAnimation(0)}
-          className='rounded-full' src={Image} alt="" />
+          className='rounded-full' src={'https://media.licdn.com/dms/image/D4D03AQHa4ePkgPBCWw/profile-displayphoto-shrink_800_800/0/1715325468901?e=1721260800&v=beta&t=dJSKWsEnHLntjzn_xXC8dQj-1UKrD0W3tn1b3zNWj-M'} alt="" />
       </div>
       <motion.p {...textAnimation(0.12)} className='text-xl'>Hi, I’m Irakli 👋</motion.p>
       <motion.h1
