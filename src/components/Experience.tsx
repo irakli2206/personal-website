@@ -6,6 +6,8 @@ import KTP from '../assets/projects/KTP.svg'
 import Poemo from '../assets/projects/Poemo.svg'
 import Proficio from '../assets/projects/Proficio.svg'
 import Resumate from '../assets/projects/Resumate.svg'
+import Jobby from '../assets/projects/Jobby.png'
+import ReactFind from '../assets/projects/ReactFind.png'
 import ProjectCard from './ProjectCard'
 import { AnimatePresence, motion, useAnimationControls, useInView } from 'framer-motion'
 import { textAnimation } from '../util'
@@ -50,6 +52,20 @@ const Experience = () => {
 
     let projectData: Project[] = [
         {
+            title: 'Jobby.ge',
+            description: `A modern job board built for the local Georgian market.`,
+            tech: ['NextJS', 'Tailwind', 'shadcn', 'React-PDF', 'Vercel', 'Supabase', 'Typescript'],
+            img: Jobby,
+            url: 'https://jobby.ge/'
+        },
+        {
+            title: 'ReactFind',
+            description: `An innovative reverse job board targeted at ReactJS developers`,
+            tech: ['NextJS', 'Tailwind', 'shadcn', 'Vercel', 'Supabase', 'Typescript'],
+            img: ReactFind,
+            url: 'https://reactfind.com/'
+        },
+        {
             title: 'Poemo',
             description: 'OpenAI-based project that generates beautiful poems based on prompts.',
             tech: ['ReactJS', 'ChakraUI', 'OpenAI API'],
@@ -78,6 +94,7 @@ const Experience = () => {
             img: Resumate,
             url: 'https://resumate.vercel.app/'
         },
+
     ]
 
     const onCardEnter = (index: number) => {
