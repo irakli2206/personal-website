@@ -24,7 +24,7 @@ const Experience = () => {
             company: 'Convo-Agency',
             description: 'Lead 3-person team, organize standups, gather updates, provide feedback. Drive tech stack decisions, coordinate with PM. Tackle high-priority, complex tasks.',
             location: 'Remote (Short-Term Contract)',
-            period: '2021-Current',
+            period: '2021-2024',
             role: 'Senior Fullstack Developer',
             tech: ['NextJS', 'GraphQL', 'ShopifyAPI', 'Javascript', 'Formik', 'Yup'],
             url: 'https://convo-agency.co.il/'
